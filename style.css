@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.mgn-top-20{
+    margin-top: 5vh;
+}
+.table-div-height{
+    height: 80rem;
+    
+    overflow-y: auto;
+    
+    margin-bottom: 5%;
+}

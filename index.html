@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- bootstrap-5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+
+    <!-- json + javascript -->
+    <script type="text/javascript" src="./UsersDataBaseResponse.json"></script>
+
+    <!-- style.css -->
+    <link rel="stylesheet" href="./style.css">
+
+    <!--title + icon-->
+    <link rel="shortcut icon" href="./leaves.ico" type="image/x-icon">
+    <title title="hmmm">DataBase_Application</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="container">
+            
+            <div class="text-center mgn-top-20 table-hover">
+                <div class="container table-div-height scroll">
+                    <table class="table table-bordered border-success table-hover" id="UsersDataBase">
+                        <thead>
+                            <tr>
+                                <th style="width: 15%">#</th>
+                                <th style="width: 25%">UserID</th>
+                                <th style="width: 60%">UserName</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <!---->
+                        </tbody>
+                    </table>                    
+                </div>
+                <div class="btn-group" role="group" aria-label="Basic outlined example">
+                    <button type="button" class="btn btn-outline-success">Update/Insert</button>
+                    <button type="button" class="btn btn-outline-secondary">Find</button>
+                    <button type="button" class="btn btn-outline-warning">Filter</button>
+                    <button type="button" class="btn btn-outline-danger">Delete</button>
+                </div>
+                
+            </div>
+        </div>
+
+        <p title="Icons made by Freepik from www.flaticon.com">nu a chto</p>
+    </div>
+
+    <script>
+        const userDataBaseTableBody = document.querySelector('#UsersDataBase tbody');
+        userDataBaseTableBody.addEventListener('click', function (e) {
+            const row = e.target.closest('tr');
+            console.log(row.getElementsByTagName("td")[0].innerHTML);
+        });
+    </script>
+    <script type="text/javascript" src="./main.js"></script>
+</body>
+</html>
